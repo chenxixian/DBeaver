@@ -7,57 +7,17 @@
   <meta name="description" content="Description">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/vue.css" title="vue">
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/dark.css" title="dark" disabled>
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/buble.css" title="buble" disabled>
-  <link rel="stylesheet" href="//unpkg.com/docsify/lib/themes/pure.css" title="pure" disabled>
-  <script src="//unpkg.com/docsify-plugin-codefund/index.js"></script>
-   <style>
-    nav.app-nav li ul {
-      min-width: 100px;
-    }
-  </style>
 </head>
 <body>
 
- <div id="app">您要的页面，服务器正在玩命加载中......</div>
  <script>
    window.$docsify = {
-     auto2top: true,
-     executeScript: true,
-     markdown: {
-        smartypants: true,
-      },
-       plugins: [
-        function (hook, vm) {
-          hook.beforeEach(function (html) {
-            if (/githubusercontent\.com/.test(vm.route.file)) {
-              url = vm.route.file
-                .replace('raw.githubusercontent.com', 'github.com')
-                .replace(/\/master/, '/blob/master')
-            } else {
-              url = 'https://github.com/chenxixian/DBeaver/blob/master/' + vm.route.file
-
-            }
-            var editHtml = '[:memo: Edit Document](' + url + ')\n'
-
-            return editHtml
-              + html
-              + '\n\n----\n\n'
-              + '<a href="https://docsify.js.org" target="_blank" style="color: inherit; font-weight: normal; text-decoration: none;">Powered by docsify</a>'
-          })
-        },
-        DocsifyCodefund.create('fae1f9a4-870c-4c25-b8e0-c80464f7a95c')
-      ]
-
    }
  </script>
 
  <!-- docsify -->
  <script src="//unpkg.com/docsify/lib/docsify.min.js"></script>
-  <script src="//unpkg.com/docsify/lib/plugins/search.min.js"></script>
- <!-- plugins -->
- <script src="//unpkg.com/docsify/lib/plugins/zoom-image.min.js"></script>
- <script src="//unpkg.com/docsify-pagination/dist/docsify-pagination.min.js"></script>
+
 
 </body>
 </html>
