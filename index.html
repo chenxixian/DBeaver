@@ -23,34 +23,10 @@
  <script>
    window.$docsify = {
      auto2top: true,
-     coverpage: true,
      executeScript: true,
-     loadSidebar: true,
-     loadNavbar: true,
-      mergeNavbar: true,
-      maxLevel: 4,
-      subMaxLevel: 2,
-      name: 'docsify',
-      search: {
-        noData: {
-          '/de-de/': 'Keine Ergebnisse!',
-          '/zh-cn/': '没有结果!',
-          '/': 'No results!'
-        },
-        paths: 'auto',
-        placeholder: {
-          '/de-de/': 'Suche',
-          '/zh-cn/': '搜索',
-          '/': 'Search'
-        }
-      },    
      markdown: {
         smartypants: true,
       },
-     pagination: {
-       previousText: '上一章节',
-       nextText: '下一章节',
-     },
        plugins: [
         function (hook, vm) {
           hook.beforeEach(function (html) {
@@ -59,7 +35,7 @@
                 .replace('raw.githubusercontent.com', 'github.com')
                 .replace(/\/master/, '/blob/master')
             } else {
-              url = 'https://github.com/chenxixian/docsify/blob/master/' + vm.route.file
+              url = 'https://github.com/chenxixian/DBeaver/blob/master/' + vm.route.file
 
             }
             var editHtml = '[:memo: Edit Document](' + url + ')\n'
